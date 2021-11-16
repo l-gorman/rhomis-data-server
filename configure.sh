@@ -22,20 +22,20 @@ IFS=''
 
 while read line ; do 
     
-    echo "${line//example.org/$AUTHURL}"; 
+    echo "${line//example.org/$DATAURL}"; 
     done < ./templates/conf.d.template > ./data/nginx/app.conf
 
 while read -r line; do 
 
     line="${line//user@email.com/$ADMINEMAIL}"
 
-    echo "${line//example.org/$AUTHURL}"; 
+    echo "${line//example.org/$DATAURL}"; 
     done < ./templates/docker-compose-template.yml > ./docker-compose.yml
 
 
 while read line ; do 
     line="${line//user@email.com/$ADMINEMAIL}"
-    echo "${line//example.org/$AUTHURL}"; 
+    echo "${line//example.org/$DATAURL}"; 
     done < ./templates/init-letsencrypt-template.sh > ./init-letsencrypt.sh
 
 
