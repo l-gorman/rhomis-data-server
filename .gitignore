@@ -5,6 +5,8 @@ docker-compose.yml
 
 
 data/certbot
+data/nginx/app.conf
+
 mongodb/
 certbot-var/
 certbot-etc/

@@ -15,6 +15,7 @@ services:
       - app-network
     entrypoint: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload;
       done & nginx -g \"daemon off;\"'"
+
   certbot:
     image: certbot/certbot
     restart: unless-stopped
@@ -47,7 +48,7 @@ services:
 
   rhomis-server-r-scripts:
     container_name: rhomis-server-r-scripts
-    image: ghcr.io/l-gorman/rhomis-data-R-scripts:latest
+    image: ghcr.io/l-gorman/rhomis-data-r-scripts:latest
     networks:
       - app-network
 
