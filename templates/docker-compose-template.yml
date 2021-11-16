@@ -45,12 +45,11 @@ services:
       - mongodb:/data/db
     networks:
       - app-network
-
-  rhomis-server-r-scripts:
-    container_name: rhomis-server-r-scripts
-    image: ghcr.io/l-gorman/rhomis-data-r-scripts:latest
-    networks:
-      - app-network
+  # rhomis-server-r-scripts:
+  #   container_name: rhomis-server-r-scripts
+  #   image: ghcr.io/l-gorman/rhomis-data-r-scripts:latest
+  #   networks:
+  #     - app-network
 
 volumes:
   mongodb: null
