@@ -3,7 +3,7 @@
 # Make empty directories
 # mkdir -p ./files/certbot/www
 # mkdir -p ./files/certbot/conf
-mkdir -p –m777 data/nginx
+mkdir -p data/nginx
 
 # Load environment variables
 source .env
@@ -23,7 +23,6 @@ while read line ; do
 
 while read -r line; do 
     line="${line//user@email.com/$ADMINEMAIL}"
-
     echo "${line//example.org/$DATAURL}"; 
     done < ./templates/docker-compose-template.yml > ./docker-compose.yml
 
