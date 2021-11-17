@@ -11,6 +11,7 @@ Has only been tested on Ubuntu 20.04.
 * Enter the command `cp ./templates/.env.template .env` to create your .env file. Replace the default values with the values  relevant to your server.
 * Add your credentials to the configuration files by entering the command `source configure.sh`
 * Install the software you need by entering the following command `source install.sh`
+* Get the service up and running with `docker-compose up -d rhomis-api-server`.
 * Create self-signed certificates to allow the nginx container to start with the `source init-letsencrypt.sh` 
 * Finally build the server with the command `docker-compose build` and start it with the command `docker-compose-up`
 
