@@ -4,7 +4,6 @@
 # mkdir -p ./files/certbot/www
 # mkdir -p ./files/certbot/conf
 mkdir -p data/nginx
-sudo chmod -rwx data/nginx
 
 # Load environment variables
 source .env
@@ -17,10 +16,10 @@ source .env
 #     echo ${line//example.org/$AUTHURL}; 
 #     done < ./files/nginxTemplate/conftemplate.d > ./files/nginx/conf.d
 IFS=''
-
-while read line ; do 
+sudo sh -s
+'while read line ; do 
     echo "${line//example.org/$DATAURL}"; 
-    done < ./templates/conf.d.template > ./data/nginx/app.conf
+    done < ./templates/conf.d.template > ./data/nginx/app.conf'
 
 while read -r line; do 
     line="${line//user@email.com/$ADMINEMAIL}"
